@@ -1,0 +1,61 @@
+{
+    "web": {
+        "browser": "chrome",
+        "headless": false,
+        "implicit_wait": 10,
+        "page_load_timeout": 30,
+        "script_timeout": 30,
+        "screenshot_dir": "screenshots/web",
+        "window_size": {
+            "width": 1920,
+            "height": 1080
+        }
+    },
+    "api": {
+        "timeout": 30,
+        "verify_ssl": true,
+        "retry_times": 3,
+        "retry_interval": 1,
+        "log_response": true,
+        "log_headers": false
+    },
+    "mobile": {
+        "platform": "android",
+        "device_name": "emulator-5554",
+        "app_package": "com.example.app",
+        "app_activity": "com.example.app.MainActivity",
+        "app_path": "apps/example.apk",
+        "implicit_wait": 10,
+        "screenshot_dir": "screenshots/mobile"
+    },
+    "performance": {
+        "thresholds": {
+            "response_time": 3.0,
+            "cpu_usage": 80,
+            "memory_usage": 80,
+            "error_rate": 0.01
+        },
+        "duration": 300,
+        "users": 100,
+        "ramp_up": 60
+    },
+    "concurrency": {
+        "max_threads": 10,
+        "max_iterations": 100,
+        "thread_delay": 1.0,
+        "timeout": 300
+    },
+    "report": {
+        "types": ["html", "allure", "json"],
+        "output_dir": "reports",
+        "template_dir": "templates",
+        "retention_days": 7
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        "file": "logs/test.log",
+        "max_size": 10485760,
+        "backup_count": 5
+    }
+}

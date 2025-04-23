@@ -1,0 +1,68 @@
+{
+    "selenium": {
+        "webdriver_path": "drivers",
+        "chrome_driver": "chromedriver.exe",
+        "firefox_driver": "geckodriver.exe",
+        "edge_driver": "msedgedriver.exe",
+        "download_dir": "downloads",
+        "proxy": {
+            "enabled": false,
+            "host": "localhost",
+            "port": 8080
+        }
+    },
+    "appium": {
+        "server_url": "http://localhost:4723",
+        "desired_capabilities": {
+            "platformName": "Android",
+            "platformVersion": "11.0",
+            "deviceName": "emulator-5554",
+            "automationName": "UiAutomator2",
+            "appPackage": "com.example.app",
+            "appActivity": "com.example.app.MainActivity"
+        },
+        "app_path": "apps/example.apk",
+        "screenshot_dir": "screenshots/mobile"
+    },
+    "jmeter": {
+        "path": "tools/apache-jmeter",
+        "test_plan_dir": "test_plans",
+        "result_dir": "results",
+        "report_dir": "reports/jmeter",
+        "properties": {
+            "jmeter.save.saveservice.output_format": "xml",
+            "jmeter.save.saveservice.response_data": "true",
+            "jmeter.save.saveservice.samplerData": "true"
+        }
+    },
+    "postman": {
+        "collection_dir": "collections",
+        "environment_dir": "environments",
+        "data_dir": "data",
+        "report_dir": "reports/postman"
+    },
+    "git": {
+        "repository": "https://github.com/example/repo.git",
+        "branch": "main",
+        "username": "user",
+        "email": "user@example.com",
+        "token": ""
+    },
+    "jenkins": {
+        "url": "http://localhost:8080",
+        "username": "admin",
+        "token": "",
+        "job_name": "test-automation",
+        "build_parameters": {
+            "environment": "test",
+            "browser": "chrome"
+        }
+    },
+    "docker": {
+        "registry": "docker.io",
+        "username": "user",
+        "password": "",
+        "image_prefix": "test-automation",
+        "compose_file": "docker-compose.yml"
+    }
+}

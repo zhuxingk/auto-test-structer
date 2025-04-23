@@ -1,0 +1,38 @@
+{
+    "env": "dev",
+    "base_url": {
+        "dev": "http://dev.example.com",
+        "test": "http://test.example.com",
+        "prod": "http://example.com"
+    },
+    "api_url": {
+        "dev": "http://api.dev.example.com",
+        "test": "http://api.test.example.com",
+        "prod": "http://api.example.com"
+    },
+    "database": {
+        "dev": {
+            "host": "localhost",
+            "port": 3306,
+            "user": "dev_user",
+            "password": "dev_password",
+            "database": "dev_db"
+        }
+    },
+    "redis": {
+        "dev": {
+            "host": "localhost",
+            "port": 6379,
+            "password": "dev_password",
+            "db": 0
+        }
+    },
+    "email": {
+        "smtp_server": "smtp.example.com",
+        "smtp_port": 587,
+        "username": "test@example.com",
+        "password": "email_password",
+        "from_address": "test@example.com",
+        "to_addresses": ["admin@example.com"]
+    }
+}
